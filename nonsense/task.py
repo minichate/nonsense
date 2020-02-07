@@ -28,7 +28,7 @@ def handle_request(team_id, channel_id, user_id, text):
         today = datetime.now(tz)
         delta = today - last_infraction
         upload_image(channel_id, delta.days)
-        post_message(channel_id, status_message(delta.days))
+        post_message(channel_id, status_message(delta.days + 9000))
         return
 
     if text == "report infraction":
